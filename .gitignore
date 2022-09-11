@@ -27,7 +27,7 @@ log/
 target/
 
 # Gradle
-.gradle/
+.gradle/**
 
 # Inclusions
 !lib/**
