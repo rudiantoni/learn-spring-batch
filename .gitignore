@@ -15,7 +15,7 @@ hs_err_pid*
 .settings/
 
 # Intellij
-.idea/
+*.idea/
 *.iml
 *.iws
 
@@ -25,6 +25,9 @@ hs_err_pid*
 # Maven
 log/
 target/
+
+# Gradle
+.gradle/
 
 # Inclusions
 !lib/**
