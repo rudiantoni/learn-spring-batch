@@ -1,0 +1,45 @@
+2022-07-07 00:02:06,918 INFO org.springframework.boot.StartupInfoLogger [main] Starting PrimeiroProjetoSpringBatchApplication using Java 17.0.3 on pop-os-x83b2o with PID 125824 (/home/ws_rudi/Documents/Projetos/Java/udemy_spr_batch_jobs/primeiro-projeto-spring-batch-v7/build/classes/java/main started by ws_rudi in /home/ws_rudi/Documents/Projetos/Java/udemy_spr_batch_jobs/primeiro-projeto-spring-batch-v7)
+2022-07-07 00:02:06,920 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-07-07 00:02:07,341 INFO org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor [main] @Bean method PropsConfig.config is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2022-07-07 00:02:07,530 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2022-07-07 00:02:07,675 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2022-07-07 00:02:07,762 INFO org.springframework.batch.core.repository.support.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: POSTGRES
+2022-07-07 00:02:07,880 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2022-07-07 00:02:07,961 INFO org.springframework.boot.StartupInfoLogger [main] Started PrimeiroProjetoSpringBatchApplication in 1.377 seconds (JVM running for 1.621)
+2022-07-07 00:02:07,963 INFO org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner [main] Running default command line with: []
+2022-07-07 00:02:08,036 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher$1 [main] Job: [SimpleJob: [name=imprimeOlaJob]] launched with the following parameters: [{run.id=34, nome=Quale}]
+2022-07-07 00:02:08,061 INFO org.springframework.batch.core.job.SimpleStepHandler [main] Executing step: [imprimeOlaStep]
+2022-07-07 00:02:08,100 INFO org.springframework.batch.core.step.AbstractStep [main] Step: [imprimeOlaStep] executed in 38ms
+2022-07-07 00:02:08,108 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher$1 [main] Job: [SimpleJob: [name=imprimeOlaJob]] completed with the following parameters: [{run.id=34, nome=Quale}] and the following status: [COMPLETED] in 55ms
+2022-07-07 00:02:08,114 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2022-07-07 00:02:08,117 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2022-07-07 00:02:38,415 INFO org.springframework.boot.StartupInfoLogger [main] Starting PrimeiroProjetoSpringBatchApplication using Java 17.0.3 on pop-os-x83b2o with PID 126081 (/home/ws_rudi/Documents/Projetos/Java/udemy_spr_batch_jobs/primeiro-projeto-spring-batch-v7/build/classes/java/main started by ws_rudi in /home/ws_rudi/Documents/Projetos/Java/udemy_spr_batch_jobs/primeiro-projeto-spring-batch-v7)
+2022-07-07 00:02:38,418 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-07-07 00:02:38,878 INFO org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor [main] @Bean method PropsConfig.config is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2022-07-07 00:02:39,094 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2022-07-07 00:02:39,256 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2022-07-07 00:02:39,347 INFO org.springframework.batch.core.repository.support.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: POSTGRES
+2022-07-07 00:02:39,472 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2022-07-07 00:02:39,547 INFO org.springframework.boot.StartupInfoLogger [main] Started PrimeiroProjetoSpringBatchApplication in 1.535 seconds (JVM running for 1.812)
+2022-07-07 00:02:39,549 INFO org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner [main] Running default command line with: []
+2022-07-07 00:02:39,626 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher$1 [main] Job: [SimpleJob: [name=imprimeOlaJob]] launched with the following parameters: [{run.id=35, nome=Quale}]
+2022-07-07 00:02:39,663 INFO org.springframework.batch.core.job.SimpleStepHandler [main] Executing step: [imprimeOlaStep]
+2022-07-07 00:02:39,708 INFO org.springframework.batch.core.step.AbstractStep [main] Step: [imprimeOlaStep] executed in 45ms
+2022-07-07 00:02:39,717 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher$1 [main] Job: [SimpleJob: [name=imprimeOlaJob]] completed with the following parameters: [{run.id=35, nome=Quale}] and the following status: [COMPLETED] in 67ms
+2022-07-07 00:02:39,730 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2022-07-07 00:02:39,734 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2022-07-07 00:02:59,024 INFO org.springframework.boot.StartupInfoLogger [main] Starting PrimeiroProjetoSpringBatchApplication using Java 17.0.3 on pop-os-x83b2o with PID 126256 (/home/ws_rudi/Documents/Projetos/Java/udemy_spr_batch_jobs/primeiro-projeto-spring-batch-v7/build/classes/java/main started by ws_rudi in /home/ws_rudi/Documents/Projetos/Java/udemy_spr_batch_jobs/primeiro-projeto-spring-batch-v7)
+2022-07-07 00:02:59,026 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-07-07 00:02:59,462 INFO org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor [main] @Bean method PropsConfig.config is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2022-07-07 00:02:59,642 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2022-07-07 00:02:59,788 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2022-07-07 00:02:59,892 INFO org.springframework.batch.core.repository.support.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: POSTGRES
+2022-07-07 00:03:00,025 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2022-07-07 00:03:00,119 INFO org.springframework.boot.StartupInfoLogger [main] Started PrimeiroProjetoSpringBatchApplication in 1.449 seconds (JVM running for 1.774)
+2022-07-07 00:03:00,122 INFO org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner [main] Running default command line with: []
+2022-07-07 00:03:00,203 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher$1 [main] Job: [SimpleJob: [name=imprimeOlaJob]] launched with the following parameters: [{run.id=36, nome=Quale}]
+2022-07-07 00:03:00,234 INFO org.springframework.batch.core.job.SimpleStepHandler [main] Executing step: [imprimeOlaStep]
+2022-07-07 00:03:00,284 INFO org.springframework.batch.core.step.AbstractStep [main] Step: [imprimeOlaStep] executed in 49ms
+2022-07-07 00:03:00,293 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher$1 [main] Job: [SimpleJob: [name=imprimeOlaJob]] completed with the following parameters: [{run.id=36, nome=Quale}] and the following status: [COMPLETED] in 72ms
+2022-07-07 00:03:00,297 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2022-07-07 00:03:00,302 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.

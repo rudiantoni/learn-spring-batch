@@ -1,0 +1,28 @@
+Unidade 04
+
+primeiro-projeto-spring-batch-v2
+- Executando normalmente
+- Banco de dados mysql
+- Propriedades internas
+
+primeiro-projeto-spring-batch-v3
+- Propriedades externas
+
+primeiro-projeto-spring-batch-v4
+- Trocado banco do Job Repository para PostgreSQL
+
+primeiro-projeto-spring-batch-v5
+- Configurado para uso de 2 bancos
+
+primeiro-projeto-spring-batch-v6
+- Configurado log com log4j2 (removido logback)
+
+primeiro-projeto-spring-batch-v7
+- Configurado log com logback (removido log4j2)
+
+primeiro-projeto-spring-batch-v8
+- Usando arquivo .xml de configuração de log local no projeto
+- Usando application.properties no projeto
+
+Unidade 05
+

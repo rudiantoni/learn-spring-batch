@@ -1,0 +1,205 @@
+2022-08-08 23:33:35,496 INFO org.springframework.boot.StartupInfoLogger [main] Starting PrimeiroProjetoSpringBatchApplication using Java 17.0.4 on ubuntu-z215hk with PID 11553 (/home/rudi/projects/java/udemy_spr_batch_jobs/primeiro-projeto-spring-batch-v8/build/classes/java/main started by rudi in /home/rudi/projects/java/udemy_spr_batch_jobs/primeiro-projeto-spring-batch-v8)
+2022-08-08 23:33:35,498 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-08-08 23:33:35,904 INFO org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor [main] @Bean method PropsConfig.config is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2022-08-08 23:33:35,913 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanInitializationException: Could not load properties; nested exception is java.io.FileNotFoundException: /opt/udemy-primeiro-job-spring-batch/application.properties
+2022-08-08 23:33:35,922 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-08-08 23:33:35,937 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanInitializationException: Could not load properties; nested exception is java.io.FileNotFoundException: /opt/udemy-primeiro-job-spring-batch/application.properties
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.postProcessBeanFactory(PropertySourcesPlaceholderConfigurer.java:169)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:325)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:183)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.myapps.primeiroprojetospringbatch.PrimeiroProjetoSpringBatchApplication.main(PrimeiroProjetoSpringBatchApplication.java:10)
+Caused by: java.io.FileNotFoundException: /opt/udemy-primeiro-job-spring-batch/application.properties
+	at org.springframework.core.io.FileSystemResource.getInputStream(FileSystemResource.java:189)
+	at org.springframework.core.io.support.EncodedResource.getInputStream(EncodedResource.java:159)
+	at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:110)
+	at org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:181)
+	at org.springframework.core.io.support.PropertiesLoaderSupport.mergeProperties(PropertiesLoaderSupport.java:162)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.postProcessBeanFactory(PropertySourcesPlaceholderConfigurer.java:160)
+	... 10 common frames omitted
+2022-08-08 23:34:12,333 INFO org.springframework.boot.StartupInfoLogger [main] Starting PrimeiroProjetoSpringBatchApplication using Java 17.0.4 on ubuntu-z215hk with PID 11811 (/home/rudi/projects/java/udemy_spr_batch_jobs/primeiro-projeto-spring-batch-v8/build/classes/java/main started by rudi in /home/rudi/projects/java/udemy_spr_batch_jobs/primeiro-projeto-spring-batch-v8)
+2022-08-08 23:34:12,335 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-08-08 23:34:12,920 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2022-08-08 23:34:14,077 ERROR com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Exception during pool initialization.
+org.postgresql.util.PSQLException: FATAL: database "batch_db" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2675)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2787)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:173)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:290)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:402)
+	at org.postgresql.Driver.connect(Driver.java:261)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:337)
+	at org.springframework.boot.jdbc.DatabaseDriver.fromDataSource(DatabaseDriver.java:329)
+	at org.springframework.boot.jdbc.init.PlatformPlaceholderDatabaseDriverResolver.getDatabaseDriver(PlatformPlaceholderDatabaseDriverResolver.java:137)
+	at org.springframework.boot.jdbc.init.PlatformPlaceholderDatabaseDriverResolver.determinePlatform(PlatformPlaceholderDatabaseDriverResolver.java:131)
+	at org.springframework.boot.jdbc.init.PlatformPlaceholderDatabaseDriverResolver.lambda$resolveAll$0(PlatformPlaceholderDatabaseDriverResolver.java:96)
+	at org.springframework.boot.jdbc.init.PlatformPlaceholderDatabaseDriverResolver.resolveAll(PlatformPlaceholderDatabaseDriverResolver.java:121)
+	at org.springframework.boot.jdbc.init.PlatformPlaceholderDatabaseDriverResolver.resolveAll(PlatformPlaceholderDatabaseDriverResolver.java:96)
+	at org.springframework.boot.autoconfigure.batch.BatchDataSourceScriptDatabaseInitializer.resolveSchemaLocations(BatchDataSourceScriptDatabaseInitializer.java:86)
+	at org.springframework.boot.autoconfigure.batch.BatchDataSourceScriptDatabaseInitializer.getSettings(BatchDataSourceScriptDatabaseInitializer.java:73)
+	at org.springframework.boot.autoconfigure.batch.BatchDataSourceScriptDatabaseInitializer.<init>(BatchDataSourceScriptDatabaseInitializer.java:48)
+	at org.springframework.boot.autoconfigure.batch.BatchAutoConfiguration$DataSourceInitializerConfiguration.batchDataSourceInitializer(BatchAutoConfiguration.java:116)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.myapps.primeiroprojetospringbatch.PrimeiroProjetoSpringBatchApplication.main(PrimeiroProjetoSpringBatchApplication.java:10)
+2022-08-08 23:34:14,080 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'batchDataSourceInitializer' defined in class path resource [org/springframework/boot/autoconfigure/batch/BatchAutoConfiguration$DataSourceInitializerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.autoconfigure.batch.BatchDataSourceScriptDatabaseInitializer]: Factory method 'batchDataSourceInitializer' threw exception; nested exception is java.lang.IllegalStateException: Unable to detect database type
+2022-08-08 23:34:14,099 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-08-08 23:34:14,132 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'batchDataSourceInitializer' defined in class path resource [org/springframework/boot/autoconfigure/batch/BatchAutoConfiguration$DataSourceInitializerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.autoconfigure.batch.BatchDataSourceScriptDatabaseInitializer]: Factory method 'batchDataSourceInitializer' threw exception; nested exception is java.lang.IllegalStateException: Unable to detect database type
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.myapps.primeiroprojetospringbatch.PrimeiroProjetoSpringBatchApplication.main(PrimeiroProjetoSpringBatchApplication.java:10)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.autoconfigure.batch.BatchDataSourceScriptDatabaseInitializer]: Factory method 'batchDataSourceInitializer' threw exception; nested exception is java.lang.IllegalStateException: Unable to detect database type
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 20 common frames omitted
+Caused by: java.lang.IllegalStateException: Unable to detect database type
+	at org.springframework.util.Assert.state(Assert.java:76)
+	at org.springframework.boot.jdbc.init.PlatformPlaceholderDatabaseDriverResolver.determinePlatform(PlatformPlaceholderDatabaseDriverResolver.java:132)
+	at org.springframework.boot.jdbc.init.PlatformPlaceholderDatabaseDriverResolver.lambda$resolveAll$0(PlatformPlaceholderDatabaseDriverResolver.java:96)
+	at org.springframework.boot.jdbc.init.PlatformPlaceholderDatabaseDriverResolver.resolveAll(PlatformPlaceholderDatabaseDriverResolver.java:121)
+	at org.springframework.boot.jdbc.init.PlatformPlaceholderDatabaseDriverResolver.resolveAll(PlatformPlaceholderDatabaseDriverResolver.java:96)
+	at org.springframework.boot.autoconfigure.batch.BatchDataSourceScriptDatabaseInitializer.resolveSchemaLocations(BatchDataSourceScriptDatabaseInitializer.java:86)
+	at org.springframework.boot.autoconfigure.batch.BatchDataSourceScriptDatabaseInitializer.getSettings(BatchDataSourceScriptDatabaseInitializer.java:73)
+	at org.springframework.boot.autoconfigure.batch.BatchDataSourceScriptDatabaseInitializer.<init>(BatchDataSourceScriptDatabaseInitializer.java:48)
+	at org.springframework.boot.autoconfigure.batch.BatchAutoConfiguration$DataSourceInitializerConfiguration.batchDataSourceInitializer(BatchAutoConfiguration.java:116)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 21 common frames omitted
+2022-08-08 23:34:38,737 INFO org.springframework.boot.StartupInfoLogger [main] Starting PrimeiroProjetoSpringBatchApplication using Java 17.0.4 on ubuntu-z215hk with PID 12027 (/home/rudi/projects/java/udemy_spr_batch_jobs/primeiro-projeto-spring-batch-v8/build/classes/java/main started by rudi in /home/rudi/projects/java/udemy_spr_batch_jobs/primeiro-projeto-spring-batch-v8)
+2022-08-08 23:34:38,739 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-08-08 23:34:39,315 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2022-08-08 23:34:39,487 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2022-08-08 23:34:39,635 INFO org.springframework.batch.core.repository.support.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: POSTGRES
+2022-08-08 23:34:39,764 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2022-08-08 23:34:39,845 INFO org.springframework.boot.StartupInfoLogger [main] Started PrimeiroProjetoSpringBatchApplication in 1.52 seconds (JVM running for 1.824)
+2022-08-08 23:34:39,847 INFO org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner [main] Running default command line with: []
+2022-08-08 23:34:39,893 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher$1 [main] Job: [SimpleJob: [name=imprimeOlaJob]] launched with the following parameters: [{run.id=1}]
+2022-08-08 23:34:39,921 INFO org.springframework.batch.core.job.SimpleStepHandler [main] Executing step: [imprimeOlaStep]
+2022-08-08 23:34:39,966 INFO org.springframework.batch.core.step.AbstractStep [main] Step: [imprimeOlaStep] executed in 44ms
+2022-08-08 23:34:39,975 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher$1 [main] Job: [SimpleJob: [name=imprimeOlaJob]] completed with the following parameters: [{run.id=1}] and the following status: [COMPLETED] in 64ms
+2022-08-08 23:34:39,979 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2022-08-08 23:34:39,983 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2022-08-08 23:34:55,391 INFO org.springframework.boot.StartupInfoLogger [main] Starting PrimeiroProjetoSpringBatchApplication using Java 17.0.4 on ubuntu-z215hk with PID 12237 (/home/rudi/projects/java/udemy_spr_batch_jobs/primeiro-projeto-spring-batch-v8/build/classes/java/main started by rudi in /home/rudi/projects/java/udemy_spr_batch_jobs/primeiro-projeto-spring-batch-v8)
+2022-08-08 23:34:55,393 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-08-08 23:34:55,977 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2022-08-08 23:34:56,147 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2022-08-08 23:34:56,240 INFO org.springframework.batch.core.repository.support.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: POSTGRES
+2022-08-08 23:34:56,368 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2022-08-08 23:34:56,448 INFO org.springframework.boot.StartupInfoLogger [main] Started PrimeiroProjetoSpringBatchApplication in 1.461 seconds (JVM running for 1.759)
+2022-08-08 23:34:56,449 INFO org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner [main] Running default command line with: []
+2022-08-08 23:34:56,526 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher$1 [main] Job: [SimpleJob: [name=imprimeOlaJob]] launched with the following parameters: [{run.id=2}]
+2022-08-08 23:34:56,557 INFO org.springframework.batch.core.job.SimpleStepHandler [main] Executing step: [imprimeOlaStep]
+2022-08-08 23:34:56,603 INFO org.springframework.batch.core.step.AbstractStep [main] Step: [imprimeOlaStep] executed in 46ms
+2022-08-08 23:34:56,613 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher$1 [main] Job: [SimpleJob: [name=imprimeOlaJob]] completed with the following parameters: [{run.id=2}] and the following status: [COMPLETED] in 68ms
+2022-08-08 23:34:56,618 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2022-08-08 23:34:56,622 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2022-08-08 23:35:42,745 INFO org.springframework.boot.StartupInfoLogger [main] Starting PrimeiroProjetoSpringBatchApplication using Java 17.0.4 on ubuntu-z215hk with PID 12519 (/home/rudi/projects/java/udemy_spr_batch_jobs/primeiro-projeto-spring-batch-v8/build/classes/java/main started by rudi in /home/rudi/projects/java/udemy_spr_batch_jobs/primeiro-projeto-spring-batch-v8)
+2022-08-08 23:35:42,748 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-08-08 23:35:43,336 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2022-08-08 23:35:43,511 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2022-08-08 23:35:43,622 INFO org.springframework.batch.core.repository.support.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: POSTGRES
+2022-08-08 23:35:43,820 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2022-08-08 23:35:43,913 INFO org.springframework.boot.StartupInfoLogger [main] Started PrimeiroProjetoSpringBatchApplication in 1.598 seconds (JVM running for 1.908)
+2022-08-08 23:35:43,915 INFO org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner [main] Running default command line with: [nome=rudi]
+2022-08-08 23:35:43,996 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher$1 [main] Job: [SimpleJob: [name=imprimeOlaJob]] launched with the following parameters: [{run.id=3, nome=rudi}]
+2022-08-08 23:35:44,029 INFO org.springframework.batch.core.job.SimpleStepHandler [main] Executing step: [imprimeOlaStep]
+2022-08-08 23:35:44,081 INFO org.springframework.batch.core.step.AbstractStep [main] Step: [imprimeOlaStep] executed in 52ms
+2022-08-08 23:35:44,091 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher$1 [main] Job: [SimpleJob: [name=imprimeOlaJob]] completed with the following parameters: [{run.id=3, nome=rudi}] and the following status: [COMPLETED] in 75ms
+2022-08-08 23:35:44,096 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2022-08-08 23:35:44,099 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2022-08-08 23:36:04,404 INFO org.springframework.boot.StartupInfoLogger [main] Starting PrimeiroProjetoSpringBatchApplication using Java 17.0.4 on ubuntu-z215hk with PID 12841 (/home/rudi/projects/java/udemy_spr_batch_jobs/primeiro-projeto-spring-batch-v8/build/classes/java/main started by rudi in /home/rudi/projects/java/udemy_spr_batch_jobs/primeiro-projeto-spring-batch-v8)
+2022-08-08 23:36:04,407 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-08-08 23:36:05,064 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2022-08-08 23:36:05,246 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2022-08-08 23:36:05,345 INFO org.springframework.batch.core.repository.support.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: POSTGRES
+2022-08-08 23:36:05,481 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2022-08-08 23:36:05,565 INFO org.springframework.boot.StartupInfoLogger [main] Started PrimeiroProjetoSpringBatchApplication in 1.561 seconds (JVM running for 1.881)
+2022-08-08 23:36:05,567 INFO org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner [main] Running default command line with: [nome=, rudi]
+2022-08-08 23:36:05,650 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher$1 [main] Job: [SimpleJob: [name=imprimeOlaJob]] launched with the following parameters: [{run.id=4, nome=}]
+2022-08-08 23:36:05,684 INFO org.springframework.batch.core.job.SimpleStepHandler [main] Executing step: [imprimeOlaStep]
+2022-08-08 23:36:05,733 INFO org.springframework.batch.core.step.AbstractStep [main] Step: [imprimeOlaStep] executed in 48ms
+2022-08-08 23:36:05,744 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher$1 [main] Job: [SimpleJob: [name=imprimeOlaJob]] completed with the following parameters: [{run.id=4, nome=}] and the following status: [COMPLETED] in 72ms
+2022-08-08 23:36:05,750 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2022-08-08 23:36:05,753 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2022-08-08 23:37:01,520 INFO org.springframework.boot.StartupInfoLogger [main] Starting PrimeiroProjetoSpringBatchApplication using Java 17.0.4 on ubuntu-z215hk with PID 13199 (/home/rudi/projects/java/udemy_spr_batch_jobs/primeiro-projeto-spring-batch-v8/build/classes/java/main started by rudi in /home/rudi/projects/java/udemy_spr_batch_jobs/primeiro-projeto-spring-batch-v8)
+2022-08-08 23:37:01,523 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-08-08 23:37:02,110 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2022-08-08 23:37:02,277 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2022-08-08 23:37:02,368 INFO org.springframework.batch.core.repository.support.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: POSTGRES
+2022-08-08 23:37:02,498 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2022-08-08 23:37:02,577 INFO org.springframework.boot.StartupInfoLogger [main] Started PrimeiroProjetoSpringBatchApplication in 1.427 seconds (JVM running for 1.689)
+2022-08-08 23:37:02,579 INFO org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner [main] Running default command line with: [nome=rudi]
+2022-08-08 23:37:02,652 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher$1 [main] Job: [SimpleJob: [name=imprimeOlaJob]] launched with the following parameters: [{run.id=5, nome=rudi}]
+2022-08-08 23:37:02,678 INFO org.springframework.batch.core.job.SimpleStepHandler [main] Executing step: [imprimeOlaStep]
+2022-08-08 23:37:02,724 INFO org.springframework.batch.core.step.AbstractStep [main] Step: [imprimeOlaStep] executed in 45ms
+2022-08-08 23:37:02,731 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher$1 [main] Job: [SimpleJob: [name=imprimeOlaJob]] completed with the following parameters: [{run.id=5, nome=rudi}] and the following status: [COMPLETED] in 62ms
+2022-08-08 23:37:02,737 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2022-08-08 23:37:02,741 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
