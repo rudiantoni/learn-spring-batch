@@ -39,3 +39,5 @@ build/
 /bin1/
 java/build/**
 
+# Non versioned properties file
+**/resources/application-nv*.properties

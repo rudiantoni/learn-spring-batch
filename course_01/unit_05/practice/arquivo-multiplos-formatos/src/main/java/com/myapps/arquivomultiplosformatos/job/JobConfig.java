@@ -10,19 +10,21 @@ import org.springframework.context.annotation.Configuration;
 
 @EnableBatchProcessing
 @Configuration
-public class JobArquivoConfig {
+public class JobConfig {
 
     private final JobBuilderFactory jobBuilderFactory;
 
-    public JobArquivoConfig (JobBuilderFactory jobBuilderFactory) {
+    public JobConfig(JobBuilderFactory jobBuilderFactory) {
         this.jobBuilderFactory = jobBuilderFactory;
     }
 
     @Bean
-    public Job jobArquivo(Step stepArquivo) {
+    public Job job(
+            Step step // Parameter is another bean annotated method: step -> StepConfig
+    ) {
         return jobBuilderFactory
-                .get("jobArquivo")
-                .start(stepArquivo)
+                .get("job") // Normally this bean method name
+                .start(step)
                 .incrementer(new RunIdIncrementer())
                 .build();
     }
