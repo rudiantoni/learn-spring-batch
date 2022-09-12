@@ -32,7 +32,7 @@ Versioning via Git was only implemented in the Unit 5, so most of the code befor
 
 ---
 
-## [Unit 2 - Spring Batch framework overview](course_01/unit_02/README.md)
+## [Unit 2 - Spring Batch framework overview](course_01/unit_02/)
 
 <details><summary>Details</summary>
 
