@@ -32,7 +32,7 @@ Versioning via Git was only implemented in the Unit 5, so most of the code befor
 
 ---
 
-## [Unit 2 - Spring Batch framework overview](course_01/unit_02/)
+## [Unit 2 - Spring Batch framework overview](course_01/unit_02)
 
 <details><summary>Details</summary>
 
@@ -55,7 +55,7 @@ Versioning via Git was only implemented in the Unit 5, so most of the code befor
 
 ---
 
-## Unit 3 - Working with Jobs and Steps
+## [Unit 3 - Working with Jobs and Steps](course_01/unit_03)
 
 <details><summary>Details</summary>
 
@@ -94,7 +94,7 @@ Versioning via Git was only implemented in the Unit 5, so most of the code befor
 
 ---
 
-## Unit 4 - Jobs in the production environment
+## [Unit 4 - Jobs in the production environment](course_01/unit_04)
 
 <details><summary>Details</summary>
 
@@ -141,7 +141,7 @@ Versioning via Git was only implemented in the Unit 5, so most of the code befor
 
 ---
 
-## Unit 5 - Spring Batch Readers
+## [Unit 5 - Spring Batch Readers](course_01/unit_05)
 
 <details><summary>Details</summary>
 
