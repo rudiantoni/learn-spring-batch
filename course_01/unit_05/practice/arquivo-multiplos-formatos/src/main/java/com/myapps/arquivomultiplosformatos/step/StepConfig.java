@@ -1,5 +1,6 @@
 package com.myapps.arquivomultiplosformatos.step;
 
+import com.myapps.arquivomultiplosformatos.reader.ClientTransactionReader;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.item.ItemWriter;
@@ -26,7 +27,8 @@ public class StepConfig {
                 .get("step") // Normally this bean method name
                 //.<Client, Client>chunk(1) // Reader and writer classes aren't used when the datasource can be any of them
                 .chunk(1) // Amount of data to be processed each time this step is executed
-                .reader(reader) // Reader bean to this step
+                //.reader(reader) // Reader bean to this step
+                .reader(new ClientTransactionReader(reader)) // Reader bean to this step, using with the delegate reader
                 .writer(writer) // Writer bean to this step
                 .build();
     }

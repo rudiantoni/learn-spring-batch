@@ -32,10 +32,6 @@ public class Transaction {
 
     @Override
     public String toString() {
-        return "Transaction{" +
-                "id='" + id + '\'' +
-                ", description='" + description + '\'' +
-                ", value=" + value +
-                '}';
+        return "Transaction{id='" + id + "', description='" + description + "', value='" + value + "'}";
     }
 }
