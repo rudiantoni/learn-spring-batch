@@ -1,6 +1,6 @@
 # Unit 2 - Spring Batch framework overview
 
-[Home](../../README.md)
+[Home](../../)
 
 ## Practice
 - [PrimeiroProjetoSpringBatch](practice/primeiro-projeto-spring-batch)
