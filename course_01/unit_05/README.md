@@ -10,6 +10,8 @@
     - Reading files with values delimited by chars.
 - [ArquivoMultiplosFormatosJob](content/ArquivoMultiplosFormatosJob)
     - Reading files whose values are delimited by chars and that can be associated with more than one domain class (entity).
+- [ArquivoMultiplosFormatosJob-v2](content/ArquivoMultiplosFormatosJob-v2)
+    - Reading multi data source files with path provided via job parameters.
 
 ## Practice
 - [arquivo-largura-fixa](practice/arquivo-largura-fixa)
@@ -21,6 +23,8 @@
 - [arquivo-multiplos-formatos](practice/arquivo-multiplos-formatos)
     - Reading files whose values are delimited by chars and that can be associated with more than one domain class (entity).
     - Stabilishing relations with domain classes register.
+    - Reading multi data source files with path provided via job parameters.
+    - Now using multi data source file reading with path provided by profile property.
 
 ## Exercise
 
