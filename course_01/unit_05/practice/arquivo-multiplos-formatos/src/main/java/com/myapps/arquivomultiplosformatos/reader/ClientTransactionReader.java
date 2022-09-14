@@ -3,16 +3,19 @@ package com.myapps.arquivomultiplosformatos.reader;
 import com.myapps.arquivomultiplosformatos.domain.Client;
 import com.myapps.arquivomultiplosformatos.domain.Transaction;
 import org.springframework.batch.item.*;
+import org.springframework.batch.item.file.FlatFileItemReader;
+import org.springframework.batch.item.file.ResourceAwareItemReaderItemStream;
+import org.springframework.core.io.Resource;
 
-public class ClientTransactionReader implements ItemStreamReader<Client> {
+public class ClientTransactionReader implements ItemStreamReader<Client>, ResourceAwareItemReaderItemStream<Client> {
 
     // Stores the current reading objects
     private Object currentObject;
 
     // This is the reader that can be used to read in fact the data from the source files
-    private ItemStreamReader<Object> delegate;
+    private FlatFileItemReader<Object> delegate;
 
-    public ClientTransactionReader(ItemStreamReader<Object> delegate) {
+    public ClientTransactionReader(FlatFileItemReader<Object> delegate) {
         this.delegate = delegate;
     }
 
@@ -60,5 +63,10 @@ public class ClientTransactionReader implements ItemStreamReader<Client> {
     private Object peek() throws Exception {
         currentObject = delegate.read(); // Reads next register
         return currentObject;
+    }
+
+    @Override
+    public void setResource(Resource resource) {
+        delegate.setResource(resource);
     }
 }

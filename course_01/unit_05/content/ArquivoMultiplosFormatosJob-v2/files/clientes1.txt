@@ -4,6 +4,7 @@
 0,Maria,Silva,30,maria@test.com
 1,t1c2,Geladeira duplex,2000
 1,t2c2,Mesa,4500
-1,t3c2,Sofá,1099,99
+1,t3c2,Sofá,1099,99      
 0,José,Silva,20,jose@test.com
 1,t1c3,Comida no Ifood,500.45
+0,Cliente,Sem Transações,20,semtransacoes@test.com
