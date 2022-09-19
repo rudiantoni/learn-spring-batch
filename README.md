@@ -1,5 +1,4 @@
 # learn-spring-batch
-
 This repository contains projects referring to my personal learning about the Spring Batch framework.
 
 ## Course 1
