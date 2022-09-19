@@ -1,8 +1,8 @@
-# learn-spring-batch - Course 1
-
-## About
+# learn-spring-batch
 
 This repository contains projects referring to my personal learning about the Spring Batch framework.
+
+## Course 1
 
 This course is divided in units, for now, each of them have 3 categories:
 - **Content**: the original content provided in the course by the instructor.
