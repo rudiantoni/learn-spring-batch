@@ -25,6 +25,7 @@
     - Stabilishing relations with domain classes register.
     - Reading multi data source files with path provided via job parameters.
     - Now using multi data source file reading with path provided by profile property.
-
+- [xml-reader](practice/xml-reader)
+    - Reading files using ItemReader reader and JAXB2 Marshaller as a XML - Java Objects transformation.
 ## Exercise
 
