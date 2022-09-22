@@ -14,10 +14,11 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-batch'
-	implementation 'org.springframework:spring-oxm'
-	//compile "com.thoughtworks.xstream:xstream:1.4.11.1"
-	runtimeOnly "com.thoughtworks.xstream:xstream:1.4.19"
+	implementation 'org.springframework:spring-oxm' // Serialize/Deserialize XML Docs <-> Java Object
+	implementation 'javax.xml.bind:jaxb-api' // Allows compile code using JAXB API
 	runtimeOnly 'org.postgresql:postgresql'
+	runtimeOnly 'org.glassfish.jaxb:jaxb-runtime' // Allows run application using JAXB API
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.batch:spring-batch-test'
 }

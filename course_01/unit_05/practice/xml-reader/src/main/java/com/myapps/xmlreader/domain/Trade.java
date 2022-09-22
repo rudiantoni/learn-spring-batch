@@ -1,12 +1,14 @@
 package com.myapps.xmlreader.domain;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "trade") // Root element in the XML document representing one register in a given set
 public class Trade {
 
-    public String isin;
-    public Integer quantity;
-    public Float price;
-    public String customer;
-
+    private String isin;
+    private Integer quantity;
+    private Float price;
+    private String customer;
 
     public String getIsin() {
         return isin;
@@ -33,7 +35,7 @@ public class Trade {
     }
 
     public String getCustomer() {
-        return customer = customer;
+        return customer;
     }
 
     public void setCustomer(String customer) {
@@ -44,6 +46,5 @@ public class Trade {
     public String toString() {
         return "Trade{isin='" + isin + "', quantity='" + quantity + "', price='" + price + "', customer='" + customer + "'}";
     }
-
 }
 

@@ -5,7 +5,6 @@ import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
-import org.springframework.batch.item.xml.StaxEventItemReader;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -20,7 +19,7 @@ public class StepConfig {
 
     @Bean
     public Step step(
-        StaxEventItemReader xmlReader,
+        ItemReader<Trade> xmlReader,
         ItemWriter<Trade> xmlWriter
     ) {
         return stepBuilderFactory
