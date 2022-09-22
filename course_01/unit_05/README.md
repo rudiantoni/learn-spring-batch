@@ -28,6 +28,6 @@
 - [xml-reader](practice/xml-reader)
     - Reading files using ItemReader reader and JAXB-2 Marshaller as a marshaller (write)/unmarshaller (read) for Java Objects and XML.
         - Marshal: means transform a Java Object into a XML document.
-        - Unmarshal: means transform a XML documento into a Java Object.
+        - Unmarshal: means transform a XML document into a Java Object.
 ## Exercise
 
