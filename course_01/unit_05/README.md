@@ -29,5 +29,7 @@
     - Reading files using ItemReader reader and JAXB-2 Marshaller as a marshaller (write)/unmarshaller (read) for Java Objects and XML.
         - Marshal: means transform a Java Object into a XML document.
         - Unmarshal: means transform a XML document into a Java Object.
+- [json-reader](practice/json-reader)
+    - Reading files using JsonItemReader reader and using Jackson as a serializer between Java Objects and JSON.
 ## Exercise
 
