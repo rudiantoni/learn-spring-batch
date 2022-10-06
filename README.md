@@ -36,20 +36,28 @@ Versioning via Git was only implemented in the Unit 5, so most of the code befor
 
 <details><summary>Details</summary>
 
-### Practice
-- [PrimeiroProjetoSpringBatch](course_01/unit_02/practice/primeiro-projeto-spring-batch)
+## Practice
+- [PrimeiroProjetoSpringBatch](practice/primeiro-projeto-spring-batch)
     - First developed project, with a basic job, step and tasklet working structure.
     - H2.
 
-### Exercise
-- [T1-PrimeiroProjetoSpringBatch-Exercicio](course_01/unit_02/exercise/T1-PrimeiroProjetoSpringBatch-Exercicio)
+## Exercise
+
+<details><summary>Details</summary>
+
+
+- [T1-PrimeiroProjetoSpringBatch-Exercicio](exercise/T1-PrimeiroProjetoSpringBatch-Exercicio)
     - Exercise original project.
     - H2.
     - Objective: The project is not working, so it needs to be fixed. This way we can practice the Spring Batch structure.
-    - [T1-PrimeiroProjetoSpringBatch-Exercicio-Resposta](course_01/unit_02/exercise/T1-PrimeiroProjetoSpringBatch-Exercicio-Resposta)
+    - [T1-PrimeiroProjetoSpringBatch-Exercicio-Resposta](exercise/T1-PrimeiroProjetoSpringBatch-Exercicio-Resposta)
         - Exercise answer.
         - H2.
         - Project working properly.
+
+
+</details>
+
 
 </details>
 
