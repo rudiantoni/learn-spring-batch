@@ -7,6 +7,9 @@
     - H2.
 
 ## Exercise
+
+<details><summary>Details</summary>
+
 - [T1-PrimeiroProjetoSpringBatch-Exercicio](exercise/T1-PrimeiroProjetoSpringBatch-Exercicio)
     - Exercise original project.
     - H2.
@@ -15,3 +18,5 @@
         - Exercise answer.
         - H2.
         - Project working properly.
+
+</details>
