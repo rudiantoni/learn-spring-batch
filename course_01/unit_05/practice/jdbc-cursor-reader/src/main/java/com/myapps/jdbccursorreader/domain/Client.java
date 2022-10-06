@@ -2,24 +2,24 @@ package com.myapps.jdbccursorreader.domain;
 
 public class Client {
 
-    private String firstName;
-    private String lastName;
+    private String first_name;
+    private String last_name;
     private String age;
     private String email;
 
 
     public String getFirstName() {
-        return firstName;
+        return first_name;
     }
     public void setFirstName(String firstName) {
-        this.firstName = firstName;
+        this.first_name = firstName;
     }
 
     public String getLastName() {
-        return lastName;
+        return last_name;
     }
     public void setLastName(String lastName) {
-        this.lastName = lastName;
+        this.last_name = lastName;
     }
 
     public String getAge() {
@@ -38,6 +38,6 @@ public class Client {
 
     @Override
     public String toString() {
-        return "Client{firstName='" + firstName + "', lastName='" + lastName + "', age='" + age + "', email='" + email + "'}";
+        return "Client{first_name='" + first_name + "', last_name='" + last_name + "', age='" + age + "', email='" + email + "'}";
     }
 }
