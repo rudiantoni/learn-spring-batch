@@ -36,12 +36,12 @@ Versioning via Git was only implemented in the Unit 5, so most of the code befor
 
 <details><summary>Details</summary>
 
-## Practice
+### Practice
 - [PrimeiroProjetoSpringBatch](practice/primeiro-projeto-spring-batch)
     - First developed project, with a basic job, step and tasklet working structure.
     - H2.
 
-## Exercise
+### Exercise
 
 <details><summary>Details</summary>
 
@@ -67,36 +67,46 @@ Versioning via Git was only implemented in the Unit 5, so most of the code befor
 
 <details><summary>Details</summary>
 
-### Content
-- [ParImparJob](course_01/unit_03/content/ParImparJob)
-    - Basic tasklets structure boilerplate with no implementations.
-- [PrimeiroJobSpringBatch](course_01/unit_03/content/PrimeiroJobSpringBatch)
-    - Basic working tasklets structure.
-
 ### Practice
-- [refactor-primeiro-projeto-spring-batch](course_01/unit_03/practice/refactor-primeiro-projeto-spring-batch)
+- [refactor-primeiro-projeto-spring-batch](practice/refactor-primeiro-projeto-spring-batch)
     - First project refactoring. Applied single responsibility.
     - H2.
-- [spring-batch-par-impar](course_01/unit_03/practice/spring-batch-par-impar)
+- [spring-batch-par-impar](practice/spring-batch-par-impar)
     - Basic working structure without single responsibility.
     - Uses application argument execution and connects to a database for metadata persinstence.
     - MySQL.
 - Other:
-    - [Clear Spring Batch metadata in MySQL database](course_01/unit_03/practice/limpar_metadados_springbatch.sql)
+    - [Clear Spring Batch metadata in MySQL database](practice/limpar_metadados_springbatch.sql)
+
+### Content
+
+<details><summary>Details</summary>
+
+- [ParImparJob](content/ParImparJob)
+    - Basic tasklets structure boilerplate with no implementations.
+- [PrimeiroJobSpringBatch](content/PrimeiroJobSpringBatch)
+    - Basic working tasklets structure.
+
+</details>
 
 ### Exercise
-- [T2-ConfiguracaoJob-Exercicio](course_01/unit_03/exercise/T2-ConfiguracaoJob-Exercicio)
+
+<details><summary>Details</summary>
+
+- [T2-ConfiguracaoJob-Exercicio](exercise/T2-ConfiguracaoJob-Exercicio)
     - Exercise original project.
     - Objective: Find and fix the project settings errors until the project is running properly.
-    - [T2-ConfiguracaoJob-Exercicio-Resposta](course_01/unit_03/exercise/T2-ConfiguracaoJob-Exercicio-Resposta)
+    - [T2-ConfiguracaoJob-Exercicio-Resposta](exercise/T2-ConfiguracaoJob-Exercicio-Resposta)
         - Exercise answer.
-- [T3-ParImparJob](course_01/unit_03/exercise/T3-ParImparJob)
+- [T3-ParImparJob](exercise/T3-ParImparJob)
     - Exercise original project.
     - Objective: Apply single responsibility in the code and make it work properly.
-    - [T3-ParImparJob-Resposta](course_01/unit_03/exercise/T3-ParImparJob-Resposta)
+    - [T3-ParImparJob-Resposta](exercise/T3-ParImparJob-Resposta)
         - Exercise answer.
-    - [T3-GabaritoParImparJob](course_01/unit_03/exercise/T3-GabaritoParImparJob)
+    - [T3-GabaritoParImparJob](exercise/T3-GabaritoParImparJob)
         - Exercise instructor answer.
+
+</details>
 
 </details>
 

@@ -1,12 +1,6 @@
 # Unit 3 - Working with Jobs and Steps
 [Home (online)](https://github.com/rudiantoni/learn-spring-batch)
 
-## Content
-- [ParImparJob](content/ParImparJob)
-    - Basic tasklets structure boilerplate with no implementations.
-- [PrimeiroJobSpringBatch](content/PrimeiroJobSpringBatch)
-    - Basic working tasklets structure.
-
 ## Practice
 - [refactor-primeiro-projeto-spring-batch](practice/refactor-primeiro-projeto-spring-batch)
     - First project refactoring. Applied single responsibility.
@@ -18,7 +12,21 @@
 - Other:
     - [Clear Spring Batch metadata in MySQL database](practice/limpar_metadados_springbatch.sql)
 
+## Content
+
+<details><summary>Details</summary>
+
+- [ParImparJob](content/ParImparJob)
+    - Basic tasklets structure boilerplate with no implementations.
+- [PrimeiroJobSpringBatch](content/PrimeiroJobSpringBatch)
+    - Basic working tasklets structure.
+
+</details>
+
 ## Exercise
+
+<details><summary>Details</summary>
+
 - [T2-ConfiguracaoJob-Exercicio](exercise/T2-ConfiguracaoJob-Exercicio)
     - Exercise original project.
     - Objective: Find and fix the project settings errors until the project is running properly.
@@ -31,3 +39,5 @@
         - Exercise answer.
     - [T3-GabaritoParImparJob](exercise/T3-GabaritoParImparJob)
         - Exercise instructor answer.
+
+</details>
