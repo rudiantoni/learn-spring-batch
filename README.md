@@ -116,44 +116,55 @@ Versioning via Git was only implemented in the Unit 5, so most of the code befor
 
 <details><summary>Details</summary>
 
-### Content
-- [PrimeiroJobSpringBatch](course_01/unit_04/content/PrimeiroJobSpringBatch)
-    - Project connecting two databases and using custom log settings.
-
 ### Practice
-- [primeiro-projeto-spring-batch-v2](course_01/unit_04/practice/primeiro-projeto-spring-batch-v2)
+- [primeiro-projeto-spring-batch-v2](practice/primeiro-projeto-spring-batch-v2)
     - Project changing from the first developed version
     - Using internal properties.
     - Using MySQL database.
-- [primeiro-projeto-spring-batch-v3](course_01/unit_04/practice/primeiro-projeto-spring-batch-v3)
+- [primeiro-projeto-spring-batch-v3](practice/primeiro-projeto-spring-batch-v3)
     - Using external properties.
-- [primeiro-projeto-spring-batch-v4](course_01/unit_04/practice/primeiro-projeto-spring-batch-v4)
+- [primeiro-projeto-spring-batch-v4](practice/primeiro-projeto-spring-batch-v4)
     - Using PostgreSQL database.
     - PostgreSQL.
-- [primeiro-projeto-spring-batch-v5](course_01/unit_04/practice/primeiro-projeto-spring-batch-v5)
+- [primeiro-projeto-spring-batch-v5](practice/primeiro-projeto-spring-batch-v5)
     - Using two databases.
-- [primeiro-projeto-spring-batch-v6](course_01/unit_04/practice/primeiro-projeto-spring-batch-v6)
+- [primeiro-projeto-spring-batch-v6](practice/primeiro-projeto-spring-batch-v6)
     - Using log tool log4j2 (logback removed).
-- [primeiro-projeto-spring-batch-v7](course_01/unit_04/practice/primeiro-projeto-spring-batch-v7)
+- [primeiro-projeto-spring-batch-v7](practice/primeiro-projeto-spring-batch-v7)
     - Using log tool logback (log4j2 removed).
-- [primeiro-projeto-spring-batch-v8](course_01/unit_04/practice/primeiro-projeto-spring-batch-v8)
+- [primeiro-projeto-spring-batch-v8](practice/primeiro-projeto-spring-batch-v8)
     - Using log definitions internally with the .xml file in resources.
     - Using properties definitions internally with the application.properties file in resources.
 - Other
-    - [Old versioning local control](course_01/unit_04/practice/Versões.txt)
-    - [Log .xml settings file](course_01/unit_04/practice/log4j.xml)
+    - [Old versioning local control](practice/Versões.txt)
+    - [Log .xml settings file](practice/log4j.xml)
+
+### Content
+
+<details><summary>Details</summary>
+
+- [PrimeiroJobSpringBatch](content/PrimeiroJobSpringBatch)
+    - Project connecting two databases and using custom log settings.
+
+</details>
 
 ### Exercise
-- [T5-ProducaoParImparJob-Exercicio](course_01/unit_04/exercise/T5-ProducaoParImparJob-Exercicio)
+
+<details><summary>Details</summary>
+
+- [T5-ProducaoParImparJob-Exercicio](exercise/T5-ProducaoParImparJob-Exercicio)
     - Exercise original project.
     - Objective: Using a project emulating a real production environment
         - With externalized log settings, logging files and properties.
         - Connection with more than one database via Class configuration.
         - Usage of job, step, reader, processor and writer.
-    - [T5-ProducaoParImparJob-Resposta](course_01/unit_04/exercise/T5-ProducaoParImparJob-Resposta)
+    - [T5-ProducaoParImparJob-Resposta](exercise/T5-ProducaoParImparJob-Resposta)
         - Exercise answer.
-    - [T5-ProducaoParImparJob-Gabarito](course_01/unit_04/exercise/T5-ProducaoParImparJob-Gabarito)
+    - [T5-ProducaoParImparJob-Gabarito](exercise/T5-ProducaoParImparJob-Gabarito)
         - Exercise instructor answer.
+
+</details>
+
 
 </details>
 
@@ -164,7 +175,6 @@ Versioning via Git was only implemented in the Unit 5, so most of the code befor
 <details><summary>Details</summary>
 
 working...
-
 
 </details>
 

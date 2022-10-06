@@ -1,10 +1,6 @@
 # Unit 4 - Jobs in the production environment
 [Home (online)](https://github.com/rudiantoni/learn-spring-batch)
 
-## Content
-- [PrimeiroJobSpringBatch](content/PrimeiroJobSpringBatch)
-    - Project connecting two databases and using custom log settings.
-
 ## Practice
 - [primeiro-projeto-spring-batch-v2](practice/primeiro-projeto-spring-batch-v2)
     - Project changing from the first developed version
@@ -28,7 +24,19 @@
     - [Old versioning local control](practice/Versões.txt)
     - [Log .xml settings file](practice/log4j.xml)
 
+## Content
+
+<details><summary>Details</summary>
+
+- [PrimeiroJobSpringBatch](content/PrimeiroJobSpringBatch)
+    - Project connecting two databases and using custom log settings.
+
+</details>
+
 ## Exercise
+
+<details><summary>Details</summary>
+
 - [T5-ProducaoParImparJob-Exercicio](exercise/T5-ProducaoParImparJob-Exercicio)
     - Exercise original project.
     - Objective: Using a project emulating a real production environment
@@ -39,3 +47,5 @@
         - Exercise answer.
     - [T5-ProducaoParImparJob-Gabarito](exercise/T5-ProducaoParImparJob-Gabarito)
         - Exercise instructor answer.
+
+</details>
