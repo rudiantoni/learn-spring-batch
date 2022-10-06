@@ -12,7 +12,7 @@ public class WriterConfig {
 
     @Bean
     public ItemWriter<Client> jdbcCursorWriter() {
-        
+
         return items -> {
 
             for (Client item: items) {
