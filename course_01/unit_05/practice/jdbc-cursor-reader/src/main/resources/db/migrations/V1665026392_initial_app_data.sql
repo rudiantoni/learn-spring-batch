@@ -1,0 +1,1 @@
+-- Insert initial data at table "clients"
