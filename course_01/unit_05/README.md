@@ -28,6 +28,8 @@
     - Using a secondary database connection, domain class auto mapped by attributes and result set equality.
     - Using generic query provider builder with SqlPagingQueryProviderFactoryBean to general usage.
     - Using PostgreSQL specific query provider builder with PostgresPagingQueryProvider to usage only with PostgreSQL databases for demonstration purposes. Some of the code was left commented to not affect the ordinary flow.
+    - Using @Qualifier injected in constructor to define DataSource at the reader configuration.
+    - Added property in order to be able to see logging about the paging and current data processing pagination in .properties file.
     - Updated contents and already present migration and rollback filenames.
     - Updated migration and rollback script to use standard flyway (not included in project) location.
 
