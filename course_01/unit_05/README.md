@@ -20,8 +20,16 @@
 - [json-reader](practice/json-reader)
     - Reading files using JsonItemReader reader and using Jackson as a serializer between Java Objects and JSON.
 - [jdbc-cursor-reader](practice/jdbc-cursor-reader)
-    - Reading files from a secondary database connection using JdbcCursorReader, without remapping all class attributes to match the result set (database query result).
+    - Reading data with Cursor with reader JdbcCursorReader.
+    - Using a secondary database connection, domain class auto mapped by attributes and result set equality.
     - In this project some database routines such as building migration and rollback scripts generation were automated via bash script.
+- [jdbc-paging-reader](practice/jdbc-paging-reader)
+    - Reading data with Pagination with reader JdbcPagingItemReader.
+    - Using a secondary database connection, domain class auto mapped by attributes and result set equality.
+    - Using generic query provider builder with SqlPagingQueryProviderFactoryBean to general usage.
+    - Using PostgreSQL specific query provider builder with PostgresPagingQueryProvider to usage only with PostgreSQL databases for demonstration purposes. Some of the code was left commented to not affect the ordinary flow.
+    - Updated contents and already present migration and rollback filenames.
+    - Updated migration and rollback script to use standard flyway (not included in project) location.
 
 ## Content
 
@@ -39,6 +47,9 @@
     - Reading multi data source files with path provided via job parameters.
 - [JdbcCursorReaderJob](content/JdbcCursorReaderJob)
     - Reading data from a database with a cursor based JDBC reader.
+    - No domain class remapping to the result set.
+- [JdbcPagingReaderJob](content/JdbcPagingReaderJob)
+    - Reading data from a database with a paging based JDBC reader.
     - No domain class remapping to the result set.
 
 </details>

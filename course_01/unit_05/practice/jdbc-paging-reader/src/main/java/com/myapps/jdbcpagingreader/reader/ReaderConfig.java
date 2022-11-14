@@ -38,7 +38,7 @@ public class ReaderConfig {
             .dataSource(dataSource)
             .queryProvider(queryProvider)
             //.queryProvider(pgQueryProvider)
-            .pageSize(3)
+            .pageSize(1)
             .rowMapper(new BeanPropertyRowMapper<Client>(Client.class))
             .build();
     }
