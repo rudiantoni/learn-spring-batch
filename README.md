@@ -9,7 +9,7 @@ This course is divided in units, for now, each of them have 3 categories:
 - **Practice**: my own code developed in the course progression with various changes.
 - **Exercise**: some tasks provided by the instructor in order to practice the code shown.
 
-There will be no mentions or links to any type of content on purpose, but the names can normally appear in the code.
+There will be no mentions or links to any type of content on purpose, but there are some names that can normally appear in the code.
 
 ## Technical
 
@@ -28,17 +28,17 @@ The logging tools were not a focus yet, but there's some changing involving them
 
 Versioning via Git was only implemented in the Unit 5, so most of the code before is in Portuguese and with no major details and with a unusual project structure.
 
+In this Readme, only the **practice** projects will be shown, if you want to see **exercise** or **content**, you must follow the links to the desired unit and expand its sections.
+
+# TODO: update these projects to Spring 3.0: Spring Batch 5.0
+
 > Unit 1 - Introduction, is not inserted since there's no code to show.
 
 ---
 
 ## [Unit 2 - Spring Batch framework overview](course_01/unit_02)
 
-<details><summary>Details</summary>
-
-working...
-
-</details>
+- [PrimeiroProjetoSpringBatch](course_01/unit_02/practice/primeiro-projeto-spring-batch): first developed project, with a basic job, step and tasklet working structure.
 
 ---
 
