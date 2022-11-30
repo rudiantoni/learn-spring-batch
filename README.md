@@ -55,7 +55,7 @@ In this Readme, only the **practice** projects will be shown, if you want to see
 ## [Unit 4 - Jobs in the production environment](course_01/unit_04)
 
 - [primeiro-projeto-spring-batch-v8](course_01/unit_04/practice/primeiro-projeto-spring-batch-v8)
-    - After various changes in logs (between log4j2 and logback, with external and internal xml definitions), properties (both external and internal definitions) and the database (changed to PostgreSQL) with even another instance defined for future batch application data read. That was  the first defined standard projects to follow.
+    - After various changes in logs (between log4j2 and logback, with external and internal xml definitions), properties (both external and internal definitions) and the database (changed to PostgreSQL) with an additional database defined for future batch application data read. That was  the first defined standard projects to follow.
 ---
 
 ## [Unit 5 - Spring Batch Readers](course_01/unit_05)
