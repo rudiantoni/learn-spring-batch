@@ -5,7 +5,7 @@
 - [refactor-primeiro-projeto-spring-batch](practice/refactor-primeiro-projeto-spring-batch)
     - First project refactoring. Applied single responsibility.
     - H2.
-- [spring-batch-par-impar](practice/spring-batch-par-impar)
+- [segundo-projeto-spring-batch](practice/segundo-projeto-spring-batch)
     - Basic working structure without single responsibility.
     - Uses application argument execution and connects to a database for metadata persinstence.
     - MySQL.

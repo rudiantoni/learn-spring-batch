@@ -47,7 +47,7 @@ In this Readme, only the **practice** projects will be shown, if you want to see
 
 - [refactor-primeiro-projeto-spring-batch](course_01/unit_03/practice/refactor-primeiro-projeto-spring-batch)
     - First project refactoring. Applied single responsibility.
-- [spring-batch-par-impar](course_01/unit_03/practice/spring-batch-par-impar)
+- [segundo-projeto-spring-batch](course_01/unit_03/practice/segundo-projeto-spring-batch)
     - Basic working structure without single responsibility. Uses application argument execution and connects to a MySQL database for metadata persistence.
 
 ---
