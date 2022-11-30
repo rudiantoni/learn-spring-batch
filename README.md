@@ -54,12 +54,8 @@ In this Readme, only the **practice** projects will be shown, if you want to see
 
 ## [Unit 4 - Jobs in the production environment](course_01/unit_04)
 
-<details><summary>Details</summary>
-
-working...
-
-</details>
-
+- [primeiro-projeto-spring-batch-v8](course_01/unit_04/practice/primeiro-projeto-spring-batch-v8)
+    - After various changes in logs, properties and the database, that was one of the first defined standard projects to follow. That's the first with the usage of more then one database.
 ---
 
 ## [Unit 5 - Spring Batch Readers](course_01/unit_05)
