@@ -60,7 +60,7 @@
 - [JdbcPagingReaderJob](content/JdbcPagingReaderJob)
     - Reading data from a database with a paging based JDBC reader.
     - No result set remapping to the domain class.
-- [SkipExceptionJob] (content/SkipExceptionJob)
+- [SkipExceptionJob](content/SkipExceptionJob)
     - Reading data from a database with a paging based JDBC reader.
     - Result set remapped to the domain class.
     - Usage of skip failure tolerance
