@@ -38,21 +38,17 @@ In this Readme, only the **practice** projects will be shown, if you want to see
 
 ## [Unit 2 - Spring Batch framework overview](course_01/unit_02)
 
-- [PrimeiroProjetoSpringBatch](course_01/unit_02/practice/primeiro-projeto-spring-batch): first developed project, with a basic job, step and tasklet working structure.
+- [PrimeiroProjetoSpringBatch](course_01/unit_02/practice/primeiro-projeto-spring-batch)
+    - First developed project, with a basic job, step and tasklet working structure.
 
 ---
 
 ## [Unit 3 - Working with Jobs and Steps](course_01/unit_03)
 
-- [refactor-primeiro-projeto-spring-batch](course_01/unit_03/practice/refactor-primeiro-projeto-spring-batch): first project refactoring. Applied single responsibility.
-- [spring-batch-par-impar](course_01/unit_03/practice/spring-batch-par-impar): Basic working structure without single responsibility. Uses application argument execution and connects to a MySQL database for metadata persistence.
-- Other:
-    - [Clear Spring Batch metadata in MySQL database](course_01/unit_03/practice/limpar_metadados_springbatch.sql)
-
-- [ParImparJob](content/ParImparJob)
-    - 
-- [PrimeiroJobSpringBatch](content/PrimeiroJobSpringBatch)
-    - Basic working tasklets structure.
+- [refactor-primeiro-projeto-spring-batch](course_01/unit_03/practice/refactor-primeiro-projeto-spring-batch)
+    - First project refactoring. Applied single responsibility.
+- [spring-batch-par-impar](course_01/unit_03/practice/spring-batch-par-impar)
+    - Basic working structure without single responsibility. Uses application argument execution and connects to a MySQL database for metadata persistence.
 
 ---
 
