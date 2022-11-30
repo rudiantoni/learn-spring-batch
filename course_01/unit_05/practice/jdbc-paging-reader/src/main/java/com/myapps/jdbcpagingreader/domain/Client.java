@@ -48,5 +48,4 @@ public class Client {
             ", email='" + email + '\'' +
             '}';
     }
-
 }

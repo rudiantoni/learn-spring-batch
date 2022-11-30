@@ -10,21 +10,28 @@ import org.springframework.batch.item.database.support.SqlPagingQueryProviderFac
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.RowMapper;
 
 import javax.sql.DataSource;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
 @Configuration
 public class ReaderConfig {
 
+
     private final DataSource dataSource;
+    // Usage to inject the ClientRowMapper implementation, and use it in the reader configuration
+    //private final ClientRowMapper clientRowMapper;
 
     public ReaderConfig(
         @Qualifier("batchAppDataSource") DataSource dataSource
+        //, ClientRowMapper clientRowMapper
     ) {
         this.dataSource = dataSource;
+        //this.clientRowMapper = clientRowMapper;
     }
 
 
@@ -39,7 +46,20 @@ public class ReaderConfig {
             .queryProvider(queryProvider)
             //.queryProvider(pgQueryProvider)
             .pageSize(1)
-            .rowMapper(new BeanPropertyRowMapper<Client>(Client.class))
+            /*
+            This mapper must be used only if the domain class attributes are the same as the result set fields
+            or columns from the database, or following standard naming conventions such as field_name = fieldName
+            beanRowMapper(domain_class) or
+            rowMapper(new BeanPropertyRowMapper<domain_class>(domain_class))
+             */
+            //.beanRowMapper(Client.class)
+            /*
+                    The mapper below can be used everytime, that's the recommended method, since it can map any result set
+                    field or column names from the database to any domain class attribute.
+                    Just need to implement the RowMapper interface.
+                */
+            //.rowMapper(clientRowMapper)
+            .rowMapper(rowMapper())
             .build();
     }
 
@@ -58,7 +78,11 @@ public class ReaderConfig {
     }
 
     @Bean
-    public SqlPagingQueryProviderFactoryBean queryProvider() {
+    public SqlPagingQueryProviderFactoryBean queryProvider(
+        // This annotation can be used to inject a DataSource in the function
+        // Or, you can just inject in the constructor.
+        //@Qualifier("batchAppDataSource") DataSource dataSource
+    ) {
         SqlPagingQueryProviderFactoryBean queryProvider = new SqlPagingQueryProviderFactoryBean();
         queryProvider.setDataSource(dataSource);
         queryProvider.setSelectClause("select *");
@@ -66,5 +90,19 @@ public class ReaderConfig {
         queryProvider.setSortKey("id");
 
         return queryProvider;
+    }
+
+    private RowMapper<Client> rowMapper() {
+        return new RowMapper<Client>() {
+            @Override
+            public Client mapRow(ResultSet rs, int rowNum) throws SQLException {
+                Client client = new Client();
+                client.setFirstName(rs.getString("first_name"));
+                client.setLastName(rs.getString("last_name"));
+                client.setAge(rs.getString("age"));
+                client.setEmail(rs.getString("email"));
+                return client;
+            }
+        };
     }
 }

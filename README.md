@@ -36,28 +36,7 @@ Versioning via Git was only implemented in the Unit 5, so most of the code befor
 
 <details><summary>Details</summary>
 
-### Practice
-- [PrimeiroProjetoSpringBatch](practice/primeiro-projeto-spring-batch)
-    - First developed project, with a basic job, step and tasklet working structure.
-    - H2.
-
-### Exercise
-
-<details><summary>Details</summary>
-
-
-- [T1-PrimeiroProjetoSpringBatch-Exercicio](exercise/T1-PrimeiroProjetoSpringBatch-Exercicio)
-    - Exercise original project.
-    - H2.
-    - Objective: The project is not working, so it needs to be fixed. This way we can practice the Spring Batch structure.
-    - [T1-PrimeiroProjetoSpringBatch-Exercicio-Resposta](exercise/T1-PrimeiroProjetoSpringBatch-Exercicio-Resposta)
-        - Exercise answer.
-        - H2.
-        - Project working properly.
-
-
-</details>
-
+working...
 
 </details>
 
@@ -67,46 +46,7 @@ Versioning via Git was only implemented in the Unit 5, so most of the code befor
 
 <details><summary>Details</summary>
 
-### Practice
-- [refactor-primeiro-projeto-spring-batch](practice/refactor-primeiro-projeto-spring-batch)
-    - First project refactoring. Applied single responsibility.
-    - H2.
-- [spring-batch-par-impar](practice/spring-batch-par-impar)
-    - Basic working structure without single responsibility.
-    - Uses application argument execution and connects to a database for metadata persinstence.
-    - MySQL.
-- Other:
-    - [Clear Spring Batch metadata in MySQL database](practice/limpar_metadados_springbatch.sql)
-
-### Content
-
-<details><summary>Details</summary>
-
-- [ParImparJob](content/ParImparJob)
-    - Basic tasklets structure boilerplate with no implementations.
-- [PrimeiroJobSpringBatch](content/PrimeiroJobSpringBatch)
-    - Basic working tasklets structure.
-
-</details>
-
-### Exercise
-
-<details><summary>Details</summary>
-
-- [T2-ConfiguracaoJob-Exercicio](exercise/T2-ConfiguracaoJob-Exercicio)
-    - Exercise original project.
-    - Objective: Find and fix the project settings errors until the project is running properly.
-    - [T2-ConfiguracaoJob-Exercicio-Resposta](exercise/T2-ConfiguracaoJob-Exercicio-Resposta)
-        - Exercise answer.
-- [T3-ParImparJob](exercise/T3-ParImparJob)
-    - Exercise original project.
-    - Objective: Apply single responsibility in the code and make it work properly.
-    - [T3-ParImparJob-Resposta](exercise/T3-ParImparJob-Resposta)
-        - Exercise answer.
-    - [T3-GabaritoParImparJob](exercise/T3-GabaritoParImparJob)
-        - Exercise instructor answer.
-
-</details>
+working...
 
 </details>
 
@@ -116,55 +56,7 @@ Versioning via Git was only implemented in the Unit 5, so most of the code befor
 
 <details><summary>Details</summary>
 
-### Practice
-- [primeiro-projeto-spring-batch-v2](practice/primeiro-projeto-spring-batch-v2)
-    - Project changing from the first developed version
-    - Using internal properties.
-    - Using MySQL database.
-- [primeiro-projeto-spring-batch-v3](practice/primeiro-projeto-spring-batch-v3)
-    - Using external properties.
-- [primeiro-projeto-spring-batch-v4](practice/primeiro-projeto-spring-batch-v4)
-    - Using PostgreSQL database.
-    - PostgreSQL.
-- [primeiro-projeto-spring-batch-v5](practice/primeiro-projeto-spring-batch-v5)
-    - Using two databases.
-- [primeiro-projeto-spring-batch-v6](practice/primeiro-projeto-spring-batch-v6)
-    - Using log tool log4j2 (logback removed).
-- [primeiro-projeto-spring-batch-v7](practice/primeiro-projeto-spring-batch-v7)
-    - Using log tool logback (log4j2 removed).
-- [primeiro-projeto-spring-batch-v8](practice/primeiro-projeto-spring-batch-v8)
-    - Using log definitions internally with the .xml file in resources.
-    - Using properties definitions internally with the application.properties file in resources.
-- Other
-    - [Old versioning local control](practice/Versões.txt)
-    - [Log .xml settings file](practice/log4j.xml)
-
-### Content
-
-<details><summary>Details</summary>
-
-- [PrimeiroJobSpringBatch](content/PrimeiroJobSpringBatch)
-    - Project connecting two databases and using custom log settings.
-
-</details>
-
-### Exercise
-
-<details><summary>Details</summary>
-
-- [T5-ProducaoParImparJob-Exercicio](exercise/T5-ProducaoParImparJob-Exercicio)
-    - Exercise original project.
-    - Objective: Using a project emulating a real production environment
-        - With externalized log settings, logging files and properties.
-        - Connection with more than one database via Class configuration.
-        - Usage of job, step, reader, processor and writer.
-    - [T5-ProducaoParImparJob-Resposta](exercise/T5-ProducaoParImparJob-Resposta)
-        - Exercise answer.
-    - [T5-ProducaoParImparJob-Gabarito](exercise/T5-ProducaoParImparJob-Gabarito)
-        - Exercise instructor answer.
-
-</details>
-
+working...
 
 </details>
 

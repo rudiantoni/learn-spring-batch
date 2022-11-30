@@ -1,6 +1,6 @@
-package com.myapps.jdbccursorreader.writer;
+package com.myapps.skipexception.writer;
 
-import com.myapps.jdbccursorreader.domain.Client;
+import com.myapps.skipexception.domain.Customer;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -9,11 +9,10 @@ import org.springframework.context.annotation.Configuration;
 public class WriterConfig {
 
     @Bean
-    public ItemWriter<Client> jdbcCursorWriter() {
-
+    public ItemWriter<Customer> skipWriter() {
         return items -> {
 
-            for (Client item: items) {
+            for (Customer item: items) {
                 System.out.println(item.toString());
             }
 

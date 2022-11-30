@@ -1,6 +1,6 @@
-package com.myapps.jdbccursorreader.step;
+package com.myapps.skipexception.step;
 
-import com.myapps.jdbccursorreader.domain.Client;
+import com.myapps.skipexception.domain.Customer;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.item.ItemReader;
@@ -18,15 +18,20 @@ public class StepConfig {
     }
 
     @Bean
-    public Step jdbcCursorStep(
-            ItemReader<Client> jdbcCursorReader,
-            ItemWriter<Client> jdbcCursorWriter
+    public Step skipStep(
+        ItemReader<Customer> skipReader,
+        ItemWriter<Customer> skipWriter
+
     ) {
         return stepBuilderFactory
-                .get("jdbcCursorStep")
-                .<Client, Client>chunk(1)
-                .reader(jdbcCursorReader)
-                .writer(jdbcCursorWriter)
-                .build();
+            .get("skipStep")
+            .<Customer, Customer>chunk(1)
+            .reader(skipReader)
+            .writer(skipWriter)
+            .faultTolerant()
+            .skip(Exception.class)
+            .skipLimit(2)
+            .build();
     }
+
 }

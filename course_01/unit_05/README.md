@@ -23,6 +23,8 @@
     - Reading data with Cursor with reader JdbcCursorReader.
     - Using a secondary database connection, domain class auto mapped by attributes and result set equality.
     - In this project some database routines such as building migration and rollback scripts generation were automated via bash script.
+    - Updated reader row mapping to a custom making it possible to use any database column name and any domain class attribute name.
+    - Some code is commented, but it's showed the different ways to use the row mapper, and the bean row mapper.
 - [jdbc-paging-reader](practice/jdbc-paging-reader)
     - Reading data with Pagination with reader JdbcPagingItemReader.
     - Using a secondary database connection, domain class auto mapped by attributes and result set equality.
@@ -32,6 +34,11 @@
     - Added property in order to be able to see logging about the paging and current data processing pagination in .properties file.
     - Updated contents and already present migration and rollback filenames.
     - Updated migration and rollback script to use standard flyway (not included in project) location.
+    - Updated reader row mapping to a custom making it possible to use any database column name and any domain class attribute name.
+    - Some code is commented, but it's showed the different ways to use the row mapper, and the bean row mapper.
+- [skip-exception](practice/skip-exception)
+    - Same as [jdbc-paging-reader](practice/jdbc-paging-reader).
+    - There are a forced error (exception thrown) to emulate the skip failure policy.
 
 ## Content
 
@@ -49,10 +56,14 @@
     - Reading multi data source files with path provided via job parameters.
 - [JdbcCursorReaderJob](content/JdbcCursorReaderJob)
     - Reading data from a database with a cursor based JDBC reader.
-    - No domain class remapping to the result set.
+    - No result set remapping to the domain class.
 - [JdbcPagingReaderJob](content/JdbcPagingReaderJob)
     - Reading data from a database with a paging based JDBC reader.
-    - No domain class remapping to the result set.
+    - No result set remapping to the domain class.
+- [SkipExceptionJob] (content/SkipExceptionJob)
+    - Reading data from a database with a paging based JDBC reader.
+    - Result set remapped to the domain class.
+    - Usage of skip failure tolerance
 
 </details>
 

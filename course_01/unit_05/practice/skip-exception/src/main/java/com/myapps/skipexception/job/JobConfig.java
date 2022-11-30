@@ -1,5 +1,4 @@
-package com.myapps.jdbccursorreader.job;
-
+package com.myapps.skipexception.job;
 
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
@@ -12,7 +11,6 @@ import org.springframework.context.annotation.Configuration;
 @EnableBatchProcessing
 @Configuration
 public class JobConfig {
-
     private final JobBuilderFactory jobBuilderFactory;
 
     public JobConfig(JobBuilderFactory jobBuilderFactory) {
@@ -20,14 +18,14 @@ public class JobConfig {
     }
 
     @Bean
-    public Job jdbcCursorJob(
-            Step jdbcCursorStep
+    public Job skipJob(
+        Step skipStep
     ) {
         return jobBuilderFactory
-                .get("jdbcCursorJob")
-                .start(jdbcCursorStep)
-                .incrementer(new RunIdIncrementer())
-                .build();
+            .get("skipJob")
+            .start(skipStep)
+            .incrementer(new RunIdIncrementer())
+            .build();
     }
 
 }
