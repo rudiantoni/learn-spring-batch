@@ -30,7 +30,7 @@ Versioning via Git was only implemented in the Unit 5, so most of the code befor
 
 In this Readme, only the **practice** projects will be shown, if you want to see **exercise** or **content**, you must follow the links to the desired unit and expand its sections.
 
-# TODO: update these projects to Spring 3.0: Spring Batch 5.0
+> TODO: update these projects to Spring 3.0: Spring Batch 5.0
 
 > Unit 1 - Introduction, is not inserted since there's no code to show.
 
