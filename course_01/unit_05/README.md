@@ -13,6 +13,7 @@
     - Stabilishing relations with domain classes register.
     - Reading multi data source files with path provided via job parameters.
     - Now using multi data source file reading with path provided by profile property.
+    - Using delegate for mapping purposes and a better flow control.
 - [xml-reader](practice/xml-reader)
     - Reading files using ItemReader reader and JAXB-2 Marshaller as a marshaller (write)/unmarshaller (read) for Java Objects and XML.
         - Marshal: means transform a Java Object into a XML document.
