@@ -1,7 +1,6 @@
 package com.myapps.budgetstatementexercise.domain;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class BudgetItem {
@@ -55,11 +54,11 @@ public class BudgetItem {
 
     @Override
     public String toString() {
-        return "BudgetItem{expenseCategoryCode='" + expenseCategoryCode +
-            "', expenseCategoryDescription='" + expenseCategoryDescription +
+        return "BudgetItem{expenseCategoryCode=" + expenseCategoryCode +
+            ", expenseCategoryDescription='" + expenseCategoryDescription +
             "', itemDescription='" + itemDescription +
-            "', itemDate='" + itemDate.format(formatter) +
-            "', itemValue='" + itemValue +
-            "'}";
+            "', itemDate=" + (itemDate != null ? itemDate.format(formatter) : "null") +
+            ", itemValue=" + itemValue +
+            "}";
     }
 }

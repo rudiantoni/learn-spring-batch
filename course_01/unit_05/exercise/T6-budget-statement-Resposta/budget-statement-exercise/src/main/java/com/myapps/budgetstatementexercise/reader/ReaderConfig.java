@@ -6,7 +6,6 @@ import org.springframework.batch.item.file.LineMapper;
 import org.springframework.batch.item.file.MultiResourceItemReader;
 import org.springframework.batch.item.file.builder.FlatFileItemReaderBuilder;
 import org.springframework.batch.item.file.builder.MultiResourceItemReaderBuilder;
-import org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper;
 import org.springframework.batch.item.file.mapping.DefaultLineMapper;
 import org.springframework.batch.item.file.mapping.FieldSetMapper;
 import org.springframework.batch.item.file.transform.DelimitedLineTokenizer;
@@ -21,7 +20,6 @@ import org.springframework.validation.BindException;
 
 import java.io.IOException;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 @SuppressWarnings("NullableProblems")
@@ -47,7 +45,6 @@ public class ReaderConfig {
     @SuppressWarnings({"rawtypes", "unchecked"})
     @Bean
     public FlatFileItemReader delimitedFileReaderDel() throws IOException {
-
         return new FlatFileItemReaderBuilder()
             .name("delimitedFileReader")
             .lineMapper(lineMapper())
