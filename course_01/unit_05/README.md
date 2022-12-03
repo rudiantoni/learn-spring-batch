@@ -2,6 +2,9 @@
 [Home (online)](https://github.com/rudiantoni/learn-spring-batch)
 
 ## Practice
+
+<details open><summary>Details</summary>
+
 - [arquivo-largura-fixa](practice/arquivo-largura-fixa)
     - Reading files with fixed width content (fixed number of columns).
 - [arquivo-largura-fixa-v2](practice/arquivo-largura-fixa-v2)
@@ -40,6 +43,8 @@
 - [skip-exception](practice/skip-exception)
     - Same as [jdbc-paging-reader](practice/jdbc-paging-reader).
     - There are a forced error (exception thrown) to emulate the skip failure policy.
+
+</details>
 
 ## Content
 
