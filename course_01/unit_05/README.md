@@ -77,8 +77,34 @@
 
 <details open><summary>Details</summary>
 
-- [budget-statement-exercise](exercise/T6-budget-statement-Resposta/budget-statement-exercise)
-    - Project reading data from multiple files and returning custom objects to the writer with the usage of delegate.
-
+- [T6-DemonstrativoOrcamentario-Exercicio](exercise/T6-DemonstrativoOrcamentario-Exercicio)
+    - Exercise base files (there's no base project in this exercise.)
+    - Objective: 1. Print data in a certain format using multiple files as data source.
+        - Read data from multiple files.
+        - Delegating a reader to properly read and deliver the data to the writer in the correct form.
+        - Write the data to the screen in the specified way.
+        - Structure: of domain, job, step, reader, delegated reader and writer.
+            - Domain: BudgetItem and BudgetCategory
+            - Job: No parameter.
+            - Step: MultiResourceItemReader and ItemWriter.
+            - Reader: MultiResourceItemReader (delegating to BudgetItemDelegatedReader that implements ItemStreamReader and ResourceAwareItemReaderItemStream, and needs a FlatFileItemReader as delegated reader), FlatFileItemReader, GenericApplicationContext,  LineMapper, LineTokenizer and FieldSetMapper.
+            - Writer: ItemWriter.
+    - Objective: 2. Print data in a certain format using database as data source.
+        - Read data from multiple files.
+        - Delegating a reader to properly read and deliver the data to the writer in the correct form.
+        - Write the data to the screen in the specified way.
+            - Config: DataSource
+            - Domain: BudgetItem and BudgetCategory
+            - Job: No parameter.
+            - Step: JdbcPagingItemReader (delegating to BudgetItemJdbcDelegatedReader that implements ItemStreamReader, and needs a JdbcPagingItemReader) and ItemWriter.
+            - Reader: JdbcPagingItemReader, DataSource, PostgresPagingQueryProvider and RowMapper.
+            - Writer: ItemWriter.
+    - [budget-statement-exercise](exercise/T6-budget-statement-Resposta/budget-statement-exercise)
+        - Exercise answer.
+        - Project reading data from multiple files and returning custom objects to the writer with the usage of delegate.
+        - Updated project, now it's reading data from database with JdbcPagingItemReader, using delegate directly at the Step config.
+    - [T6-DemonstrativoOrcamentario-Gabarito](exercise/T6-DemonstrativoOrcamentario-Gabarito)
+        - Exercise instructor answer.
+    
 </details>
 

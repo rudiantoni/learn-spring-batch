@@ -23,11 +23,12 @@ public class WriterConfig {
         currencyDecimalFormat.setDecimalFormatSymbols(decimalFormatSymbols);
     }
 
-    @SuppressWarnings("rawtypes")
+    @SuppressWarnings("RedundantStringFormatCall")
     @Bean
     public ItemWriter<BudgetCategory> budgetStatementWriter() {
         return items -> {
             for(BudgetCategory item: items) {
+
                 System.out.println("---- Demonstrativo orçamentário ----");
                 System.out.println(String.format("[%d] %s - %s",
                     item.getExpenseCategoryCode(),

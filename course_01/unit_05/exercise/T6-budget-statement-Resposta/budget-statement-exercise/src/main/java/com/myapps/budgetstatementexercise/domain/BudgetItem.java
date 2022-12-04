@@ -1,12 +1,10 @@
 package com.myapps.budgetstatementexercise.domain;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
 public class BudgetItem {
 
-    private static final DateTimeFormatter formatter =  DateTimeFormatter.ofPattern("dd/MM/yyyy");
-    private Long expenseCategoryCode; //código da natureza da despesa
+    private Long expenseCategoryCode;
     private String expenseCategoryDescription; //descrição da natureza de despesa
     private String itemDescription; //descrição do item
     private LocalDate itemDate; //data do item
@@ -57,7 +55,7 @@ public class BudgetItem {
         return "BudgetItem{expenseCategoryCode=" + expenseCategoryCode +
             ", expenseCategoryDescription='" + expenseCategoryDescription +
             "', itemDescription='" + itemDescription +
-            "', itemDate=" + (itemDate != null ? itemDate.format(formatter) : "null") +
+            "', itemDate=" + itemDate +
             ", itemValue=" + itemValue +
             "}";
     }

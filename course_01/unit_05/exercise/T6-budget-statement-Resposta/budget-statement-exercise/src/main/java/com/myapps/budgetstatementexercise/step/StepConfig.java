@@ -1,11 +1,10 @@
 package com.myapps.budgetstatementexercise.step;
 
-import com.myapps.budgetstatementexercise.domain.BudgetCategory;
-import com.myapps.budgetstatementexercise.domain.BudgetItem;
+import com.myapps.budgetstatementexercise.reader.BudgetItemJdbcDelegatedReader;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.item.ItemWriter;
-import org.springframework.batch.item.file.MultiResourceItemReader;
+import org.springframework.batch.item.database.JdbcPagingItemReader;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -21,13 +20,16 @@ public class StepConfig {
     @SuppressWarnings({"rawtypes", "unchecked"})
     @Bean
     public Step budgetStatementStep(
-        MultiResourceItemReader<BudgetItem> budgetStatementReader,
-        ItemWriter<BudgetCategory> budgetStatementWriter
+        // Leitor usado para ler de vários arquivos
+        // MultiResourceItemReader<BudgetItem> budgetStatementReader,
+        JdbcPagingItemReader bugdetStatementJdbcPagingReader,
+        ItemWriter budgetStatementWriter
     ) {
         return stepBuilderFactory
             .get("budgetStatementStep")
-            .<BudgetItem, BudgetCategory>chunk(1)
-            .reader(budgetStatementReader)
+            .chunk(1)
+            //.reader(budgetStatementReader)
+            .reader(new BudgetItemJdbcDelegatedReader(bugdetStatementJdbcPagingReader))
             .writer(budgetStatementWriter)
             .build();
     }

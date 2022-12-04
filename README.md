@@ -60,11 +60,65 @@ In this Readme, only the **practice** projects will be shown, if you want to see
 
 ## [Unit 5 - Spring Batch Readers](course_01/unit_05)
 
-<details><summary>Details</summary>
+- [arquivo-largura-fixa-v2](course_01/unit_05/practice/arquivo-largura-fixa-v2)
+    - Reading files with fixed width content (fixed number of columns).
+- [arquivo-delimitado](course_01/unit_05/practice/arquivo-delimitado)
+    - Reading files with values delimited by chars.
+- [arquivo-multiplos-formatos](course_01/unit_05/practice/arquivo-multiplos-formatos)
+    - Reading files whose values are delimited by chars and that can be associated with more than one domain class (entity).
+    - Stabilishing relations with domain classes register.
+    - Reading multi data source files with path provided via job parameters.
+    - Now using multi data source file reading with path provided by profile property.
+    - Using delegate for mapping purposes and a better flow control.
+- [xml-reader](course_01/unit_05/practice/xml-reader)
+    - Reading files using ItemReader reader and JAXB-2 Marshaller as a marshaller (write)/unmarshaller (read) for Java Objects and XML.
+        - Marshal: means transform a Java Object into a XML document.
+        - Unmarshal: means transform a XML document into a Java Object.
+- [json-reader](course_01/unit_05/practice/json-reader)
+    - Reading files using JsonItemReader reader and using Jackson as a serializer between Java Objects and JSON.
+- [jdbc-cursor-reader](course_01/unit_05/practice/jdbc-cursor-reader)
+    - Reading data with Cursor with reader JdbcCursorReader.
+    - Using a secondary database connection, domain class auto mapped by attributes and result set equality.
+    - In this project some database routines such as building migration and rollback scripts generation were automated via bash script.
+    - Updated reader row mapping to a custom making it possible to use any database column name and any domain class attribute name.
+    - Some code is commented, but it's showed the different ways to use the row mapper, and the bean row mapper.
+- [jdbc-paging-reader](course_01/unit_05/practice/jdbc-paging-reader)
+    - Reading data with Pagination with reader JdbcPagingItemReader.
+    - Using a secondary database connection, domain class auto mapped by attributes and result set equality.
+    - Using generic query provider builder with SqlPagingQueryProviderFactoryBean to general usage.
+    - Using PostgreSQL specific query provider builder with PostgresPagingQueryProvider to usage only with PostgreSQL databases for demonstration purposes. Some of the code was left commented to not affect the ordinary flow.
+    - Using @Qualifier injected in constructor to define DataSource at the reader configuration.
+    - Added property in order to be able to see logging about the paging and current data processing pagination in .properties file.
+    - Updated contents and already present migration and rollback filenames.
+    - Updated migration and rollback script to use standard flyway (not included in project) location.
+    - Updated reader row mapping to a custom making it possible to use any database column name and any domain class attribute name.
+    - Some code is commented, but it's showed the different ways to use the row mapper, and the bean row mapper.
+- [budget-statement-exercise](course_01/unit_05/exercise/T6-budget-statement-Resposta/budget-statement-exercise)
+    - An exercise made in a different way.
+    - Project reading data from multiple files and returning custom objects to the writer with the usage of delegate.
+    - Updated project, now it's reading data from database with JdbcPagingItemReader, using delegate directly at the Step config.
+    - This can be a good reference for delegate, multi file source and database reading usage.
+    - Objective: 1. Print data in a certain format using multiple files as data source.
+        - Read data from multiple files.
+        - Delegating a reader to properly read and deliver the data to the writer in the correct form.
+        - Write the data to the screen in the specified way.
+        - Structure: of domain, job, step, reader, delegated reader and writer.
+            - Domain: BudgetItem and BudgetCategory
+            - Job: No parameter.
+            - Step: MultiResourceItemReader and ItemWriter.
+            - Reader: MultiResourceItemReader (delegating to BudgetItemDelegatedReader that implements ItemStreamReader and ResourceAwareItemReaderItemStream, and needs a FlatFileItemReader as delegated reader), FlatFileItemReader, GenericApplicationContext,  LineMapper, LineTokenizer and FieldSetMapper.
+            - Writer: ItemWriter.
+    - Objective: 2. Print data in a certain format using database as data source.
+        - Read data from multiple files.
+        - Delegating a reader to properly read and deliver the data to the writer in the correct form.
+        - Write the data to the screen in the specified way.
+            - Config: DataSource
+            - Domain: BudgetItem and BudgetCategory
+            - Job: No parameter.
+            - Step: JdbcPagingItemReader (delegating to BudgetItemJdbcDelegatedReader that implements ItemStreamReader, and needs a JdbcPagingItemReader) and ItemWriter.
+            - Reader: JdbcPagingItemReader, DataSource, PostgresPagingQueryProvider and RowMapper.
+            - Writer: ItemWriter.
 
-working...
-
-</details>
 
 ---
 

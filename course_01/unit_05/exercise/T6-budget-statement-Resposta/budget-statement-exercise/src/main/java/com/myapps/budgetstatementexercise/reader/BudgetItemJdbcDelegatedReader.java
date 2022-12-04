@@ -2,50 +2,26 @@ package com.myapps.budgetstatementexercise.reader;
 
 import com.myapps.budgetstatementexercise.domain.BudgetCategory;
 import com.myapps.budgetstatementexercise.domain.BudgetItem;
-import org.springframework.batch.item.*;
-import org.springframework.batch.item.file.FlatFileItemReader;
-import org.springframework.batch.item.file.ResourceAwareItemReaderItemStream;
-import org.springframework.core.io.Resource;
+import org.springframework.batch.item.ExecutionContext;
+import org.springframework.batch.item.ItemStreamException;
+import org.springframework.batch.item.ItemStreamReader;
+import org.springframework.batch.item.database.JdbcPagingItemReader;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class BudgetItemDelegatedReader implements ItemStreamReader<BudgetCategory>, ResourceAwareItemReaderItemStream<BudgetCategory>  {
+public class BudgetItemJdbcDelegatedReader implements ItemStreamReader<BudgetCategory> {
 
-    // Este é o leitor que será usado de fato para ler os dados dos arquivos de fonte
-    private final FlatFileItemReader<Object> delegate;
+    private final JdbcPagingItemReader<Object> delegate;
 
     private BudgetItem lastBudgetItem;
 
-    public BudgetItemDelegatedReader(FlatFileItemReader<Object> delegate) {
+    public BudgetItemJdbcDelegatedReader(JdbcPagingItemReader<Object> delegate) {
         this.delegate = delegate;
     }
 
-    @SuppressWarnings("NullableProblems")
     @Override
-    public void setResource(Resource resource) {
-        delegate.setResource(resource);
-    }
-
-    @SuppressWarnings("NullableProblems")
-    @Override
-    public void open(ExecutionContext executionContext) throws ItemStreamException {
-        delegate.open(executionContext);
-    }
-
-    @SuppressWarnings("NullableProblems")
-    @Override
-    public void update(ExecutionContext executionContext) throws ItemStreamException {
-        delegate.update(executionContext);
-    }
-
-    @Override
-    public void close() throws ItemStreamException {
-        delegate.close();
-    }
-
-    @Override
-    public BudgetCategory read() throws Exception, UnexpectedInputException, ParseException, NonTransientResourceException {
+    public BudgetCategory read() throws Exception {
         // Se o último não tiver sido definido
         if (lastBudgetItem == null) {
             lastBudgetItem = (BudgetItem) delegate.read();
@@ -82,6 +58,23 @@ public class BudgetItemDelegatedReader implements ItemStreamReader<BudgetCategor
         else {
             return null;
         }
+
     }
 
+    @SuppressWarnings("NullableProblems")
+    @Override
+    public void open(ExecutionContext executionContext) throws ItemStreamException {
+        delegate.open(executionContext);
+    }
+
+    @SuppressWarnings("NullableProblems")
+    @Override
+    public void update(ExecutionContext executionContext) throws ItemStreamException {
+        delegate.update(executionContext);
+    }
+
+    @Override
+    public void close() throws ItemStreamException {
+        delegate.close();
+    }
 }
