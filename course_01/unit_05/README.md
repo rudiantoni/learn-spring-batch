@@ -75,7 +75,7 @@
 
 ## Exercise
 
-<details><summary>Details</summary>
+<details open><summary>Details</summary>
 
 - [budget-statement-exercise](exercise/T6-budget-statement-Resposta/budget-statement-exercise)
     - Project reading data from multiple files and returning custom objects to the writer with the usage of delegate.

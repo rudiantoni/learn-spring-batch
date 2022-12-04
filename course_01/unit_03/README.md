@@ -2,6 +2,9 @@
 [Home (online)](https://github.com/rudiantoni/learn-spring-batch)
 
 ## Practice
+
+<details open><summary>Details</summary>
+
 - [refactor-primeiro-projeto-spring-batch](practice/refactor-primeiro-projeto-spring-batch)
     - First project refactoring. Applied single responsibility.
     - H2.
@@ -11,6 +14,8 @@
     - MySQL.
 - Other:
     - [Clear Spring Batch metadata in MySQL database](practice/limpar_metadados_springbatch.sql)
+
+</details>
 
 ## Content
 
@@ -25,7 +30,7 @@
 
 ## Exercise
 
-<details><summary>Details</summary>
+<details open><summary>Details</summary>
 
 - [T2-ConfiguracaoJob-Exercicio](exercise/T2-ConfiguracaoJob-Exercicio)
     - Exercise original project.

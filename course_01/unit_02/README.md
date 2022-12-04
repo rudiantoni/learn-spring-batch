@@ -2,14 +2,18 @@
 [Home (online)](https://github.com/rudiantoni/learn-spring-batch)
 
 ## Practice
+
+<details open><summary>Details</summary>
+
 - [PrimeiroProjetoSpringBatch](practice/primeiro-projeto-spring-batch)
     - First developed project, with a basic job, step and tasklet working structure.
     - H2.
 
+</details>
+
 ## Exercise
 
-<details><summary>Details</summary>
-
+<details open><summary>Details</summary>
 
 - [T1-PrimeiroProjetoSpringBatch-Exercicio](exercise/T1-PrimeiroProjetoSpringBatch-Exercicio)
     - Exercise original project.
@@ -19,6 +23,5 @@
         - Exercise answer.
         - H2.
         - Project working properly.
-
 
 </details>

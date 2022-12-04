@@ -2,6 +2,9 @@
 [Home (online)](https://github.com/rudiantoni/learn-spring-batch)
 
 ## Practice
+
+<details open><summary>Details</summary>
+
 - [primeiro-projeto-spring-batch-v2](practice/primeiro-projeto-spring-batch-v2)
     - Project changing from the first developed version
     - Using internal properties.
@@ -24,6 +27,8 @@
     - [Old versioning local control](practice/Versões.txt)
     - [Log .xml settings file](practice/log4j.xml)
 
+</details>
+
 ## Content
 
 <details><summary>Details</summary>
@@ -35,7 +40,7 @@
 
 ## Exercise
 
-<details><summary>Details</summary>
+<details open><summary>Details</summary>
 
 - [T5-ProducaoParImparJob-Exercicio](exercise/T5-ProducaoParImparJob-Exercicio)
     - Exercise original project.
