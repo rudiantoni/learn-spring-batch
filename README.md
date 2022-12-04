@@ -100,25 +100,24 @@ In this Readme, only the **practice** projects will be shown, if you want to see
     - This can be a good reference for delegate, multi file source and database reading usage.
     - Objective: 1. Print data in a certain format using multiple files as data source.
         - Read data from multiple files.
-        - Delegating a reader to properly read and deliver the data to the writer in the correct form.
+        - Delegating a reader from another reader to properly read and deliver the data to the writer in the correct form.
         - Write the data to the screen in the specified way.
-        - Structure: of domain, job, step, reader, delegated reader and writer.
+        - Structure usage in answer:
             - Domain: BudgetItem and BudgetCategory
             - Job: No parameter.
             - Step: MultiResourceItemReader and ItemWriter.
             - Reader: MultiResourceItemReader (delegating to BudgetItemDelegatedReader that implements ItemStreamReader and ResourceAwareItemReaderItemStream, and needs a FlatFileItemReader as delegated reader), FlatFileItemReader, GenericApplicationContext,  LineMapper, LineTokenizer and FieldSetMapper.
             - Writer: ItemWriter.
-    - Objective: 2. Print data in a certain format using database as data source.
-        - Read data from multiple files.
-        - Delegating a reader to properly read and deliver the data to the writer in the correct form.
-        - Write the data to the screen in the specified way.
+    - Objective: 2. Same as before, but the data must be read from a database.
+        - Read data from database.
+        - Delegating a reader from the step to properly read and deliver the data to the writer in the correct form.
+        - Structure usage in answer:
             - Config: DataSource
             - Domain: BudgetItem and BudgetCategory
             - Job: No parameter.
             - Step: JdbcPagingItemReader (delegating to BudgetItemJdbcDelegatedReader that implements ItemStreamReader, and needs a JdbcPagingItemReader) and ItemWriter.
             - Reader: JdbcPagingItemReader, DataSource, PostgresPagingQueryProvider and RowMapper.
             - Writer: ItemWriter.
-
 
 ---
 
