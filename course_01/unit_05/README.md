@@ -100,7 +100,7 @@
             - Config: DataSource
             - Domain: BudgetItem and BudgetCategory
             - Job: No parameter.
-            - Step: JdbcPagingItemReader (delegating to BudgetItemJdbcDelegatedReader that implements ItemStreamReader, and needs a JdbcPagingItemReader) and ItemWriter.
+            - Step: JdbcPagingItemReader (delegating to BudgetItemJdbcDelegatedReader that implements ItemStreamReader, and needs a JdbcPagingItemReader as delegated reader) and ItemWriter.
             - Reader: JdbcPagingItemReader, DataSource, PostgresPagingQueryProvider and RowMapper.
             - Writer: ItemWriter.
     - [T6-DemonstrativoOrcamentario-Gabarito](exercise/T6-DemonstrativoOrcamentario-Gabarito)
